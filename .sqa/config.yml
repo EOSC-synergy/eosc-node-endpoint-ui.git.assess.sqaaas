@@ -1,0 +1,56 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/madgeek-arc/eosc-node-endpoint-ui:
+      branch: main
+      repo: https://github.com/madgeek-arc/eosc-node-endpoint-ui.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/madgeek-arc/eosc-node-endpoint-ui git:
+        commands:
+        - /usr/bin/env sh .sqa/script.nerdy-sepia-markhor.sh
+        container: qc.acc_shaggy-cinnamon-bird
+  QC.Doc:
+    repos:
+      github.com/madgeek-arc/eosc-node-endpoint-ui find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.bluesy-orchid-moose.sh
+        container: qc.doc_gamy-burgundy-greyhound
+      github.com/madgeek-arc/eosc-node-endpoint-ui git:
+        commands:
+        - /usr/bin/env sh .sqa/script.gloppy-heliotrope-collie.sh
+        container: qc.doc_beady-sangria-coyote
+      github.com/madgeek-arc/eosc-node-endpoint-ui markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.crabby-brown-dragonfly.sh
+        container: qc.doc_thirsty-xanthic-hummingbird
+  QC.Lic:
+    repos:
+      github.com/madgeek-arc/eosc-node-endpoint-ui licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.squeaky-malachite-nightingale.sh
+        container: qc.lic_flabby-cobalt-mastiff
+  QC.Sty:
+    repos:
+      github.com/madgeek-arc/eosc-node-endpoint-ui hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.scaly-cream-warthog.sh
+        container: qc.sty_lanky-dandelion-corgi
+      github.com/madgeek-arc/eosc-node-endpoint-ui jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.squeaky-ochre-elephant.sh
+        container: qc.sty_sunny-yellow-cat
+  QC.Ver:
+    repos:
+      github.com/madgeek-arc/eosc-node-endpoint-ui get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.sunny-cerulean-bloodhound.sh
+        container: qc.ver_smelly-myrtle-gopher
+timeout: 5400
