@@ -15,42 +15,42 @@ sqa_criteria:
     repos:
       github.com/madgeek-arc/eosc-node-endpoint-ui git:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-ivory-whippet.sh
-        container: qc.acc_tasty-ultramarine-bloodhound
+        - /usr/bin/env sh .sqa/script.hazy-olive-owl.sh
+        container: qc.acc_skanky-olivine-stoat
   QC.Doc:
     repos:
       github.com/madgeek-arc/eosc-node-endpoint-ui find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sleepy-jade-coral.sh
-        container: qc.doc_shaky-russet-mastiff
+        - /usr/bin/env sh .sqa/script.ready-heliotrope-hyrax.sh
+        container: qc.doc_leaky-thistle-hornet
       github.com/madgeek-arc/eosc-node-endpoint-ui git:
         commands:
-        - /usr/bin/env sh .sqa/script.squirrely-sepia-bulldog.sh
-        container: qc.doc_slaphappy-wisteria-dragonfly
+        - /usr/bin/env sh .sqa/script.smelly-carmine-goose.sh
+        container: qc.doc_randy-orange-antelope
       github.com/madgeek-arc/eosc-node-endpoint-ui markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.tacky-rose-mist.sh
-        container: qc.doc_chummy-gold-wallaby
+        - /usr/bin/env sh .sqa/script.nippy-peach-barnacle.sh
+        container: qc.doc_thirsty-cerulean-wolverine
   QC.Lic:
     repos:
       github.com/madgeek-arc/eosc-node-endpoint-ui licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-celadon-clam.sh
-        container: qc.lic_pretty-coral-turkey
+        - /usr/bin/env sh .sqa/script.sleazy-heliotrope-horse.sh
+        container: qc.lic_stinky-red-greyhound
   QC.Sty:
     repos:
       github.com/madgeek-arc/eosc-node-endpoint-ui hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-rust-meerkat.sh
-        container: qc.sty_gloppy-indigo-horse
+        - /usr/bin/env sh .sqa/script.paltry-goldenrod-tang.sh
+        container: qc.sty_homely-tan-hippopotamus
       github.com/madgeek-arc/eosc-node-endpoint-ui jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-red-woodlouse.sh
-        container: qc.sty_wheezy-lavender-flounder
+        - /usr/bin/env sh .sqa/script.cranky-purple-ferret.sh
+        container: qc.sty_muzzy-maroon-kangaroo
   QC.Ver:
     repos:
       github.com/madgeek-arc/eosc-node-endpoint-ui get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.jumpy-cinnabar-cat.sh
-        container: qc.ver_smelly-mauve-frise
+        - /usr/bin/env sh .sqa/script.flabby-burgundy-eagle.sh
+        container: qc.ver_cheeky-silver-flamingo
 timeout: 5400
